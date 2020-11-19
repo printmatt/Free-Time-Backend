@@ -7,8 +7,8 @@ public class TimeStamp{
     private String[] weekdays = {"Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"};
     
     // default constructor
-    public TimeStamp(){
-        weekday = "Monday";
+    public TimeStamp (){
+        weekday = 0;
         hour = 0;
         minute = 0;
         second = 0;
@@ -16,7 +16,7 @@ public class TimeStamp{
 
     // constructor weekday is input as a number 1-7, 1 is Sunday
     public TimeStamp(String weekDay, int hour, int minute, int second){
-        int weekday;
+        int weekday=0;
         for(int i = 0; i< weekdays.length; i++){
         	if (weekDay.equals(weekdays[i])){
         		weekday = i;
@@ -57,7 +57,6 @@ public class TimeStamp{
                 else return true;
             }
         }
-        return false;
     }
 
     public boolean isAfter(TimeStamp stamp2){
@@ -87,10 +86,10 @@ public class TimeStamp{
     public void setHour(int hour){
         this.hour = hour;
     }
-    public void setMinute(){
+    public void setMinute(int minute){
         this.minute =minute;
     }
-    public void setSecond(){
+    public void setSecond(int second){
         this.second = second;
     }
     

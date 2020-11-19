@@ -5,8 +5,7 @@ public class FreeTimeStamps {
     private TimeStamp end;
     
     // constructor for pair of time stamps
-    public FreeTimeStamp(String weekday,int starthour, int startminute, int startsecond,
-                                        ,int endhour, int endminute, int endsecond){
+    public FreeTimeStamps (String weekday,int starthour, int startminute, int startsecond,int endhour, int endminute, int endsecond){
         this.weekday = weekday;
         start = new TimeStamp(weekday,starthour,startminute,startsecond);
         end = new TimeStamp(weekday, endhour, endminute, endsecond);
@@ -14,9 +13,9 @@ public class FreeTimeStamps {
     }
 
     // default constructor
-    public FreeTimeStamp(){
-        start = TimeStamp();
-        end = TimeStamp();
+    public FreeTimeStamps(){
+        start = new TimeStamp();
+        end = new TimeStamp();
     }
 
     // Calculate how much time overlaps
